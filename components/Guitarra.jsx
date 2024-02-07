@@ -3,7 +3,6 @@ import Link from 'next/link';
 import styles from '@/styles/guitarras.module.css';
 
 const Guitarra = ({ guitarra }) => {
-	console.log(guitarra.attributes);
 	const {
 		nombre,
 		imagen: {

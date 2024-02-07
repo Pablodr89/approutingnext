@@ -11,7 +11,7 @@ const GuitarraByUrl = ({ guitarra }) => {
 	const [error, setError] = useState('');
 	const router = useRouter();
 
-	const { agregarCarrito, carrito } = useCarritoContext();
+	const { agregarCarrito } = useCarritoContext();
 
 	const {
 		nombre,
