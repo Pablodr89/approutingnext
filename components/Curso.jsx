@@ -1,7 +1,7 @@
 'use client';
 import styles from '@/styles/curso.module.css';
 
-export const Curso = ({ curso }) => {
+const Curso = ({ curso }) => {
 	const {
 		titulo,
 		descripcion,
@@ -33,3 +33,4 @@ export const Curso = ({ curso }) => {
 		</section>
 	);
 };
+export default Curso;

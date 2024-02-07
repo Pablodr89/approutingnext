@@ -1,4 +1,4 @@
-import { Post } from '@/components/Post';
+import Post from '@/components/Post';
 import { getPosts } from '@/data/getPosts';
 import styles from '@/styles/grid.module.css';
 

@@ -2,8 +2,8 @@ import styles from '@/styles/grid.module.css';
 import { getGuitarras } from '@/data/getGuitarras';
 import { getPosts } from '@/data/getPosts';
 import Guitarra from '@/components/Guitarra';
-import { Post } from '@/components/Post';
-import { Curso } from '@/components/Curso';
+import Post from '@/components/Post';
+import Curso from '@/components/Curso';
 
 const getCurso = async () => {
 	const response = await fetch(`${process.env.API_URL}/api/curso?populate=imagen`);
@@ -11,7 +11,7 @@ const getCurso = async () => {
 	return data;
 };
 
-export default async function Home() {
+const Home = async () => {
 	const guitarras = await getGuitarras();
 	const posts = await getPosts();
 	const curso = await getCurso();
@@ -40,4 +40,5 @@ export default async function Home() {
 			</section>
 		</>
 	);
-}
+};
+export default Home;

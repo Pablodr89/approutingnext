@@ -7,7 +7,7 @@ export const metadata = {
 	description: 'Nuestra tienda',
 };
 
-export default async function page() {
+const page = async () => {
 	const guitarras = await getGuitarras();
 
 	return (
@@ -21,4 +21,5 @@ export default async function page() {
 			</div>
 		</main>
 	);
-}
+};
+export default page;

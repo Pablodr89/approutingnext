@@ -3,6 +3,11 @@ import { formatearFecha } from '@/helpers/formatearFecha';
 import styles from '@/styles/blog.module.css';
 import { getPostByUrl } from '@/data/getPosts';
 
+export const metadata = {
+	title: 'Guitar - Blog',
+	description: 'Nuestro blog',
+};
+
 const page = async ({ params: { url: urlParam } }) => {
 	const post = await getPostByUrl(urlParam);
 

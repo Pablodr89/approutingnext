@@ -4,10 +4,10 @@ import Link from 'next/link';
 import { formatearFecha } from '@/helpers/formatearFecha';
 import styles from '../styles/blog.module.css';
 
-export const Post = ({ post }) => {
+const Post = ({ post }) => {
 	const {
 		titulo,
-		descripcion,
+		contenido,
 		publishedAt,
 		url,
 		imagen: {
@@ -16,8 +16,8 @@ export const Post = ({ post }) => {
 			},
 		},
 	} = post.attributes;
-	// const contenidoText = contenido[0]?.children[0]?.text;
-	const contenidoText = '';
+	const contenidoText = contenido[0]?.children[0]?.text;
+
 	return (
 		<article>
 			<Image src={imagenUrl} width={600} height={400} alt={`imagen blog ${titulo}`} />
@@ -33,3 +33,4 @@ export const Post = ({ post }) => {
 		</article>
 	);
 };
+export default Post;
